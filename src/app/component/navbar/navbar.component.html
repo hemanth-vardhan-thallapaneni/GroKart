@@ -1,0 +1,31 @@
+<div *ngIf="isLoggedIn" class="header" fxLayoutAlign="center center">
+    <mat-card class="navbar" fxLayout="row" fxLayoutGap="35px" fxLayoutAlign="space-around center">
+        <div class="logo" fxFlex="78">
+            <img src="../../../assets/groblacklogo.png" alt="" srcset="">
+        </div>
+        <div class="desk_buttons" fxFlex="22">
+            <button mat-button> {{user.email | slice : 0:7}}... </button>
+
+            <button (click)="click_cart()" mat-button>Cart <span [matBadge]="counts" matBadgeSize="small" class="material-icons">
+                    shopping_cart
+                </span></button>
+            <button mat-button (click)="logout()">Sign Out</button>
+        </div>
+        <div class="menu">
+            <span [matMenuTriggerFor]="menu" class="material-icons">
+                drag_handle
+            </span>
+
+        </div>
+
+        <mat-menu #menu="matMenu" xPosition="after" fxLayoutAlign="column">
+            <button mat-button> {{user.email | slice : 0: 7}}... </button>
+            <button (click)="click_cart()" mat-button>Cart <span [matBadge]="counts" matBadgeSize="small" class="material-icons">
+                shopping_cart
+            </span></button>
+        <button (click)="logout()" mat-button>Sign Out</button>
+
+         
+        </mat-menu>
+    </mat-card>
+</div>

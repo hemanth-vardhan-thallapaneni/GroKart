@@ -1,0 +1,93 @@
+.left_div{
+    height: 100vh;
+
+    background-color: rgb(88,100,237,0.5);
+    backdrop-filter: blur(4px);
+}
+.google_card{
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    font-family: poppins;
+    font-weight: bold;
+    font-size: 0.9rem;
+
+}
+.google_card:hover{
+    cursor: pointer;
+     background-color: rgb(88,100,237,0.5);
+     color: white;
+}
+.login_png{
+    position: absolute;
+    top:12%;
+}
+.wave{
+    position: absolute;
+    z-index: 10;
+    left: 33%;
+    height: 100%;
+    margin-bottom: 2px;
+    width: 50%;
+    // top: 100%;
+    transform: rotate(90deg);
+}
+h2{
+    font-family: poppins;
+    font-size: 3rem;
+}
+.form{
+    z-index: 20;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    width: 400px;
+    
+}
+.mat-form-field{
+    margin: 5px;
+    width: 400px;
+}
+.register_card{
+
+    height: 25px;
+    margin-top: 10px;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-family: poppins;
+    font-weight: bold;
+    span{
+        cursor: pointer;
+        margin-left: 4px;
+        font-size: bold;
+        color: purple;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    h2{
+       color: white;
+    }
+   
+    .logo img{
+        width: 250px;
+        height: 250px;
+    }
+    .form{
+        width: 350px;
+    }
+    .mat-form-field{
+        margin: 5px;
+        width: 350px;
+    }
+    .login_png{
+        display: none;
+    }
+    .wave{
+        display: none;
+    }
+    .Login_page{
+        background-color: rgb(88,100,237);;
+    }
+}

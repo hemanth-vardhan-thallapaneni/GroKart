@@ -1,0 +1,51 @@
+.header{
+   z-index: 1000;
+   position: sticky;
+   position: -webkit-sticky;
+   top: 0; 
+    button{
+        font-family: 'Poppins', sans-serif;
+    }
+   
+
+}
+.navbar{
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(15px);
+    position: absolute;
+    width: 90%;
+    margin-top: 5%;
+    height: 50px;
+}
+
+.logo
+{
+    width: 100%;
+    img{
+        height: 70px;
+        width: 70px;
+    }
+}
+
+.menu{
+    display: none;
+}
+::ng-deep .mat-menu-panel {
+    // padding: 0 10px!important;
+    max-width: 50px !important;
+  }
+@media only screen and (max-width: 600px) {
+    .navbar{
+        margin-top:15%;
+    }
+    
+    .desk_buttons{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+        
+
+    }
+}

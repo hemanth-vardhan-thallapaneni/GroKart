@@ -1,0 +1,48 @@
+<div class="register_page" fxLayout="row" fxLayout.xs="column" fxLayouAlign.xs="center center" fxLayoutAlign="space-around center">
+    <div fxLayout="column" fxLayoutAlign="start center" class="left_div" fxFlex="60">
+        <div class="logo">
+            <img width="350px" height="350px" src="../../../assets/growhite.png" alt="">
+        </div>
+        <div class="login_png">
+            <img width="600px" height="600px" src="../../../assets/register.png" alt="" srcset="">
+        </div>
+       
+    </div>
+    <div class="wave">
+        <img src="../../../assets/register_wave.svg" alt="" srcset="">
+  </div>
+    <div class="right_div" fxLayout="column" fxLayoutAlign="center center" fxFlex="40"> 
+       <mat-card class="form" >
+        <form fxLayout="column" fxLayoutAlign="space-around center" class="example-form" [formGroup]="Register" (ngSubmit)="register_submit()">
+            <h2>Register</h2>
+            <mat-card (click)="googe_signin()" fxLayout fxLayoutAlign="space-around center" class="google_card">
+                <img width="22px" height="22px" src="../../../assets/google.png" alt="" srcset="">
+                Sign up with Google
+            </mat-card><br>
+            <span>OR</span>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="Name">
+              </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="Email" >
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Password</mat-label>
+              <input matInput formControlName="Password">
+            </mat-form-field>
+            
+            <div fxLayout fxLayoutGap="10px">
+                <button mat-raised-button type="submit" color="primary">Register</button>
+                <!-- <button mat-raised-button type="submit" color="primary">Register</button> -->
+            </div>
+            <mat-card fxLayout fxLayoutAlign="space-around center" class="register_card">
+               Already have an account? <span [routerLink]="['/Login']" routerLinkActive="router-link-active" >Sign In.</span>
+             </mat-card>
+          </form>
+       </mat-card>
+     
+          
+    </div>
+</div>

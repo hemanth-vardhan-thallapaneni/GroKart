@@ -1,0 +1,265 @@
+{
+    "products":{
+        "fruits":[
+            {
+                "name": "Apples",
+                "price": "70",
+                "quantity": "1 Unit",
+                "img_src": "../../../assets/products/apple.png"
+              
+            },
+            {
+                "name": "Blue Berry",
+                "price": "70",
+                "quantity": "1 Unit",
+                "img_src": "../../../assets/products/blueberries.png"
+                
+            },
+            {
+                "name": "Banana",
+                "price": "70",
+                "quantity": "1 Unit",
+                "img_src": "../../../assets/products/banana.png"
+                       
+            },
+            {
+                "name": "Apricot",
+                "price": "590",
+                "quantity": "1 KG",
+                "img_src": "../../../assets/products/apricot.png"
+                    
+            },
+            {
+                "name": "Avocado",
+                "price": "230",
+                "quantity": "1 KG",
+                "img_src": "../../../assets/products/avocado.png"
+                       
+            },
+            {
+                "name": "Grapes(Black)",
+                "price": "75",
+                "quantity": "1 KG",
+                "img_src": "../../../assets/products/blackgrape.png"
+                       
+            },
+            {
+                "name": "Grapes(Green)",
+                "price": "64",
+                "quantity": "1 KG",
+                "img_src": "../../../assets/products/greegrape.png"
+                       
+            },
+            {
+                "name": "Guava",
+                "price": "43",
+                "quantity": "1 KG",
+                "img_src": "../../../assets/products/guava.png"
+                       
+            },
+            {
+                "name": "Mango",
+                "price": "95",
+                "quantity": "1 KG",
+                "img_src": "../../../assets/products/mango.png"
+                       
+            },
+            {
+                "name": "Orange",
+                "price": "54",
+                "quantity": "1 KG",
+                "img_src": "../../../assets/products/orange.png"
+                       
+            },
+            {
+                "name": "Papaya",
+                "price": "27",
+                "quantity": "1 Unit",
+                "img_src": "../../../assets/products/papaya.png"
+                       
+            },
+            {
+                "name": "Pineapple",
+                "price": "25",
+                "quantity": "1 Unit",
+                "img_src": "../../../assets/products/pineapple.png"
+                       
+            },
+            {
+                "name": "Pomegranate",
+                "price": "155",
+                "quantity": "1 KG",
+                "img_src": "../../../assets/products/pomegranate.png"
+                       
+            },
+            {
+                "name": "Watermelon",
+                "price": "16",
+                "quantity": "1 Unit",
+                "img_src": "../../../assets/products/watermelon.png"
+                       
+            }
+         
+         
+        ],
+      "vegetables":[
+        {
+            "name":"Carrot",
+            "price": "70",
+            "quantity": "1 Unit",
+            "img_src": "../../../assets/products/carrot.png"
+           
+        },
+        {
+            "name": "Cauliflower",
+            "price": "70",
+            "quantity": "1 Unit",
+            "img_src": "../../../assets/products/cauliflower.png"
+           
+        },
+        {
+            "name": "Bell Pepper",
+            "price": "39",
+            "quantity": "1 KG",
+            "img_src": "../../../assets/products/bellpepper.png"
+           
+        },
+        {
+            "name": "Beetroot",
+            "price": "22",
+            "quantity": "1 KG",
+            "img_src": "../../../assets/products/beet.png"
+           
+        },
+        {
+            "name": "Cabbage",
+            "price": "17",
+            "quantity": "1 Unit",
+            "img_src": "../../../assets/products/cabbage.png"
+           
+        },
+        {
+            "name": "Coconut",
+            "price": "30",
+            "quantity": "1 Unit",
+            "img_src": "../../../assets/products/coconut.png"
+           
+        },
+        {
+            "name": "Drumsticks",
+            "price": "13",
+            "quantity": "1 Unit",
+            "img_src": "../../../assets/products/drum.png"
+           
+        },
+        {
+            "name": "Brinjal",
+            "price": "35",
+            "quantity": "1 KG",
+            "img_src": "../../../assets/products/brinjal.png"
+           
+        },
+        {
+            "name": "Garlic",
+            "price": "50",
+            "quantity": "500 Gms",
+            "img_src": "../../../assets/products/garlic.png"
+           
+        },
+        {
+            "name": "Ginger",
+            "price": "50",
+            "quantity": "1 KG",
+            "img_src": "../../../assets/products/ginger.png"
+           
+        },
+        {
+            "name": "Green chili",
+            "price": "44",
+            "quantity": "1 KG",
+            "img_src": "../../../assets/products/chili.png"
+           
+        },
+        {
+            "name": "Lemon",
+            "price": "10",
+            "quantity": "1 Unit",
+            "img_src": "../../../assets/products/lemon.png"
+           
+        },
+        {
+            "name": "Mushroom",
+            "price": "70",
+            "quantity": "500 Gms",
+            "img_src": "../../../assets/products/mushroom.png"
+           
+        },
+        {
+            "name": "Onion",
+            "price": "70",
+            "quantity": "1 KG",
+            "img_src": "../../../assets/products/onion.png"
+           
+        },
+        {
+            "name": "Potato",
+            "price": "23",
+            "quantity": "1 KG",
+            "img_src": "../../../assets/products/potato.png"
+        
+        },
+        {
+            "name": "Spinach",
+            "price": "11",
+            "quantity": "1 Unit",
+            "img_src": "../../../assets/products/spinach.png"
+           
+        },
+        {
+            "name": "Tomato",
+            "price": "23",
+            "quantity": "1 KG",
+            "img_src": "../../../assets/products/tomato.png"
+           
+        }
+      ]
+    
+        }, 
+    "top_recommendations": [
+        {
+            "name": "Apples",
+            "price": "70",
+            "quantity": "1 Unit",
+            "img_src": "../../../assets/products/apple.png"
+            
+        },
+        {
+            "name": "Blue Berry",
+            "price": "70",
+            "quantity": "1 Unit",
+            "img_src": "../../../assets/products/blueberries.png"
+            
+        },
+        {
+            "name": "Banana",
+            "price": "70",
+            "quantity": "12 Unit",
+            "img_src": "../../../assets/products/banana.png"
+                   
+        },
+        {
+            "name":"Carrot",
+            "price": "70",
+            "quantity": "1 Unit",
+            "img_src": "../../../assets/products/carrot.png"
+           
+        },
+        {
+            "name": "Cauliflower",
+            "price": "70",
+            "quantity": "1 Unit",
+            "img_src": "../../../assets/products/cauliflower.png"
+           
+        }
+    ]
+}

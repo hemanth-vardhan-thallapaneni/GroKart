@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "gro--kart"
+  },
+  "targets": {
+    "gro--kart": {
+      "hosting": {
+        "GroKart": [
+          "gro--kart"
+        ]
+      }
+    }
+  }
+}

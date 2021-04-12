@@ -1,0 +1,99 @@
+.cart{
+    // margin: 50px;
+    border-radius: 20px;
+}
+h2{
+    font-family: poppins;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.Product_list{
+    max-height: 300px;
+}
+mat-card{
+    margin: 5px 0px;
+    height: 120px;
+    width: 100%;
+    font-size: 1rem;
+    font-family: poppins;
+    img{
+        height: 70px;
+        width: 90px;
+    }
+}
+.name{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.counts{
+    border: 2px black solid;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    height: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    width: 70px;
+     .material-icons{
+      font-size: 20px;
+    }
+  
+
+    
+}
+.delete{
+    border: 1px black dashed;
+    padding: 5px;
+    border-radius: 50%;
+    color: black;
+    transition: transform 2s;
+}
+.delete:hover{
+    
+    // animation: 2s;
+    cursor: pointer;
+    color: white;
+    background: red;
+}
+.price{
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+.remove{
+
+    height: 25px;
+    width: 25px;
+    display: flex;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    border:1px black solid;
+    span{
+        // padding-right: 8px;
+        font-size: 1.8rem;
+    }
+    
+}
+// span{
+//     font-family: poppins;
+//     font-size: 1.5rem;
+//     font-weight: bolder;
+// }
+.remove:hover{
+    cursor: pointer;
+    background: black;
+    color: white;
+
+}
+.total{
+    height: 50px;
+    
+    font-family: poppins;
+    font-size: 1rem;
+    font-weight: bold;
+}

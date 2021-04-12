@@ -1,0 +1,130 @@
+
+
+<div class="products" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="10px">
+  <div class="category" fxLayout="row" fxLayoutAlign="start start">
+    <mat-button-toggle-group (change)="select_category(category)" [(ngModel)]="category" name="fontStyle" aria-label="Font Style">
+      <mat-button-toggle value="Fruits">Fruits
+        <img src="../../../assets/fuits.png" alt="" srcset="">
+      </mat-button-toggle>
+      <mat-button-toggle value="Vegetables">Vegetables
+        <img src="../../../assets/vegetables.png" alt="" srcset="">
+      </mat-button-toggle>
+      <mat-button-toggle value="Both">Both
+        <img src="../../../assets/yoga.png" alt="" srcset="">
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  
+</div>
+    <h3>Search Your Favourites</h3>
+    <form class="example-form">
+      <input type="text" matInput matInput placeholder="Search" [formControl]="myControl" (change)="empty_check($event)" [matAutocomplete]="auto">
+               <span class="material-icons search" (click)="search_item(myControl)">
+                search
+                </span>
+                <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                  <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option.name}}
+                  </mat-option>
+        </mat-autocomplete>
+      </form>
+     <div *ngIf="!search_pro" fxLayout="column" fxLayoutAlign="center center">
+      <h2>Top Recommendations</h2>
+      <div [@cardAnimation]="top_recommendations.length" fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayoutGap="15px">
+         
+          <mat-card *ngFor="let product of top_recommendations" class="product" fxLayout="column" fxLayoutAlign="space-around center" [ngStyle]="{'background':product.color}">
+                  <img width="150px" height="95px" src={{product.img_src}} alt={{product.name}} srcset="">
+                  <div fxFlex="100">
+                    <span class="name">{{product.name}}</span>
+                  </div>
+                  <mat-card-content fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="30px">
+                   
+                      <div fxLayout="column">
+                          <span class="price"><span>&#8377;</span> {{product.price}}</span>
+                          <span class="quantity">Quantity: {{product.quantity}} </span>
+                      </div>
+                      <div *ngIf="!product.count">
+                        <button (click)="add_init(product)" class="add_to_cart" style="background-color: orange" mat-mini-fab aria-label="Example icon button with a filter list icon">
+                            <span class="material-icons">
+                                add
+                                </span>
+                          </button>
+                      </div>
+                      <div *ngIf="product.count" class="counts" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="material-icons icons" (click)="add_remove_item(product,'add')">
+                            add
+                            </span>
+                        <span>{{product.count}}</span>
+                        <span class="material-icons" (click)="add_remove_item(product,'remove')" >
+                            remove
+                            </span>
+                  </div>
+                  </mat-card-content>
+          </mat-card>
+      </div>
+     </div>
+    
+      <h2>Available Products</h2>
+      <div [@cardAnimation]="show_all.length" *ngIf="!search_pro" class="all_products" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="15px">
+     
+        <mat-card *ngFor="let product of show_all" class="product" fxLayout="column" fxLayoutAlign="space-around center" [ngStyle]="{'background':product.color}">
+          <img width="150px" height="95px" src={{product.img_src}} alt={{product.name}} srcset="">
+          <div fxFlex="100">
+            <span class="name">{{product.name}}</span>
+          </div>
+          <mat-card-content fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="30px">
+           
+              <div fxLayout="column">
+                  <span class="price"><span>&#8377;</span> {{product.price}}</span>
+                  <span class="quantity">Quantity: {{product.quantity}} </span>
+              </div>
+              <div *ngIf="!product.count">
+                <button (click)="add_init(product)" class="add_to_cart" style="background-color: orange" mat-mini-fab aria-label="Example icon button with a filter list icon">
+                    <span class="material-icons">
+                        add
+                        </span>
+                  </button>
+              </div>
+              <div *ngIf="product.count" class="counts" fxLayout="column" fxLayoutAlign="center center">
+                <span class="material-icons icons" (click)="add_remove_item(product,'add')">
+                    add
+                    </span>
+                <span>{{product.count}}</span>
+                <span class="material-icons" (click)="add_remove_item(product,'remove')" >
+                    remove
+                    </span>
+          </div>
+          </mat-card-content>
+  </mat-card>
+      </div>
+      <div [@cardAnimation]="search.length" *ngIf="search_pro" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="15px">
+        <mat-card *ngFor="let product of search" class="product" fxLayout="column" fxLayoutAlign="space-around center" [ngStyle]="{'background':product.color}">
+          <img width="150px" height="95px" src={{product.img_src}} alt={{product.name}} srcset="">
+          <div fxFlex="100">
+            <span class="name">{{product.name}}</span>
+          </div>
+          <mat-card-content fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="30px">
+           
+              <div fxLayout="column">
+                  <span class="price"><span>&#8377;</span> {{product.price}}</span>
+                  <span class="quantity">Quantity: {{product.quantity}} </span>
+              </div>
+              <div *ngIf="!product.count">
+                <button (click)="add_init(product)" class="add_to_cart" style="background-color: orange" mat-mini-fab aria-label="Example icon button with a filter list icon">
+                    <span class="material-icons">
+                        add
+                        </span>
+                  </button>
+              </div>
+              <div *ngIf="product.count" class="counts" fxLayout="column" fxLayoutAlign="center center">
+                <span class="material-icons icons" (click)="add_remove_item(product,'add')">
+                    add
+                    </span>
+                <span>{{product.count}}</span>
+                <span class="material-icons" (click)="add_remove_item(product,'remove')" >
+                    remove
+                    </span>
+          </div>
+          </mat-card-content>
+  </mat-card>
+      </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="cart" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="15px">
+    <div class="remove" (click)="close()" >
+        <span class="material-icons">
+            clear
+            </span>
+    </div>
+    <div>
+        <img width="150px" height="150px" src="../../../assets/groblacklogo.png" alt="" srcset="">
+    </div>
+  
+       
+    <div>
+        <h2 data-lax-preset="spin">Cart</h2>
+    </div>
+    <div  [@cardAnimation]="products.length"  *ngIf="!show_product" class="Product_list">
+        <mat-card *ngFor="let product of products" class="product" fxLayout="row" fxLayoutAlign="space-around center" [ngStyle]="{'background':product.color}">
+            <img width="150px" height="95px" src={{product.img_src}} alt={{product.name}} srcset="">
+          
+            <mat-card-content  fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="30px">
+                <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="5px"> 
+                    <span class="name">{{product.name}}</span>
+                   
+                    <div *ngIf="product.count > 0 ? true : false" class="counts" fxLayout="row" fxLayoutAlign="center center">
+                        <span class="material-icons" (click)="add_remove_item(product,'remove')" >
+                            remove
+                            </span>
+                        <span>{{product.count}}</span>
+                        <span class="material-icons icons" (click)="add_remove_item(product,'add')">
+                            add
+                         </span>
+                        
+                  </div>
+               
+                  </div>
+                  <div>
+                    <span class="material-icons delete">
+                        delete
+                        </span>
+                  </div>
+               
+                <div fxLayout="row">
+                    
+                    <!-- <span class="quantity">Quantity: {{product.quantity}} </span> -->
+                    <span class="price"><span>&#8377;</span> {{product.price * product.count}}</span>
+                </div>
+                <div *ngIf="!product.count">
+                  <button (click)="add_init(product)" class="add_to_cart" style="background-color: orange" mat-mini-fab aria-label="Example icon button with a filter list icon">
+                      <span class="material-icons">
+                          add
+                          </span>
+                    </button>
+                </div>
+            
+            </mat-card-content>
+           
+    </mat-card>
+    <mat-card class="total" fxLayout fxLayoutAlign="space-around center">
+        <span>Total :</span>
+        <span>{{total_price}}</span>
+    </mat-card>
+    </div>
+    <div *ngIf="show_product" fxLayout="column" fxLayoutAling="space-around center">
+        <img width="200px" height="200px" src="../../../assets/Magnifier.png" alt="" srcset=""><br>
+        <span>Oops! No items in the cart</span>
+    </div>
+</div>
